@@ -1,0 +1,2 @@
+# Aprendizados da Semana
+Nesta primeira semana aprendi sobre linguagem de terminal, git e VSCode. Apesar de haver algumas desatenções, principalmente no que se refere ao git, avalio como boa minha **evolução**. Os exercícios são montados de uma forma que facilita muito a fixação.
