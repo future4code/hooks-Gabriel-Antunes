@@ -1,0 +1,7 @@
+1- Ter bastante atenção em cada palavra do enunciado, pois uma palavra entendida errada pode comprometer todo o objetivo do código.
+2- Retirar palavras chaves do enunciado, que definem a essencia do que está sendo pedido.
+3- Pensar nas informações que devemos ter, o que receberemos e o que devemos devolver.
+4- Fazer um esquema tipo fluxograma, que mostre o caminho que o código deve seguir.
+5- Fazer um código "feio", que deve se preocupar basicamente com a funcionalidade.
+6- Testar força-bruta. Entrar dados manuamente onde pode estar dando erro.
+7- Após o código estar totalmente funcional, devemos refatorar, que é nada mais nada menos que usar as boas práticas da programação, com nomes e organização do código.
