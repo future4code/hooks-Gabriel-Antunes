@@ -35,7 +35,12 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-   
+    let novaArray = array.filter((item)=>{
+        return item % 2 === 0
+    })
+    return novaArray.map((item)=>{
+        return item**2
+    })    
 }
 
 // EXERCÍCIO 06
