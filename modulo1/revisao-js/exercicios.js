@@ -26,8 +26,11 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
+    let novaArray = array.filter((item)=>{
+        return item % 2 === 0
+    })
     
-  
+    return novaArray  
 }
 
 // EXERCÍCIO 05
