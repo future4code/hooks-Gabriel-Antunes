@@ -10,7 +10,13 @@ function retornaTamanhoArray(array) {
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-    
+    copiaArray = array
+    novaArray = []
+
+    while (copiaArray.length > 0){
+        novaArray.push(copiaArray.pop())
+    }
+    return novaArray
 }   
 
 // EXERCÍCIO 03
