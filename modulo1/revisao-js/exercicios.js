@@ -71,14 +71,28 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
     }else{
        diferenca = num2 - num1 
     }
-    
+
     return {maiorNumero, maiorDivisivelPorMenor, diferenca}
     
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+    let arr = []
+    let i = 0
+    for (;;){
+        if (arr.length < n){
+            if (i % 2 === 0){
+                arr.push(i)
+                i++
+            }else{
+                i++
+            }
+        }else{
+            break
+        }
+    }
+    return arr 
 } 
 
 // EXERCÍCIO 09
