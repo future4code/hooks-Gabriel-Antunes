@@ -4,66 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Controle de Estoque</title>
+    <title>Inventory Control</title>
+    <link rel="Stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div>
-        <p>Nome da lojinha</p>
-    </div>
-    
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
-    </div>
-
-    <h2>Controle de Estoque</h2>
-
-    <table>
-        <tr>
-            <th>Foto</th>
-            <th>Descrição</th>
-            <th>Preço (R$)</th>
-            <th>Quantidade disponível</th>
-        </tr>
-
-        <tr>
-            <td><img src="img/EBM-Papst.jpg" width="50px" alt="Foto ventilador EBM"/></td>
-            <td> Ventilador EBM  </td>
-            <td> 22.000,00 </td>
-            <td> 6 </td>
-        </tr>
-
-        <tr>
-            <td><img src="img/eliminador-de-gotas-02.jpg" width="50px" alt="Foto eliminador de gotas"/></td>
-            <td> Eliminador de gotas </td>
-            <td> 3.500,00 </td>
-            <td> 10 </td>
-        </tr>
-
-        <tr>
-            <td><img src="img/icm-icad.jpeg" width="50px" alt="Foto válvula ICM/ICAD"/></td>
-            <td> Válvula ICM/ICAD </td>
-            <td> 32.000,00 </td>
-            <td> 3 </td>
-        </tr>
-
-        <tr>
-            <td><img src="img/cea-allenge.png" width="50px" alt="Foto condensador evaporativo"/></td>
-            <td> Bloco Condensador Evaporativo </td>
-            <td> 39.000,00 </td>
-            <td> 8 </td>
-        </tr>
+    <header>
+        <div id="open-space"> 
+            <h1>Open Space</h1>
         
-        <tr>
-            <td><img src="img/acumulador-de-oleo.png" width="50px" alt="Foto Acumulador de óleo"/></td>
-            <td> Acumulador de óleo </td>
-            <td> 32.000,00 </td>
-            <td> 3 </td>
-        </tr>
+        
+            <p><b>The new way to buy NFT.</b></p>
+            <p>Why go to sea when the space is much bigger?</p>
 
-    </table>
+        </div>
 
+        <div class="nav">
+            <a class="links" href="index.html">Home Page</a>
+            <a class="links" href="ctrl-estoque.html">Inventory Control</a>
+            <a class="links" href="add-produto.html">Add Products</a>
+            <a class="links" href="funcionarios.html">Employees</a>
+        </div>
+</header>
+<body>
+        <h2>Controle de Estoque</h2>
+
+        <table class="content-table">
+            <thread>
+                <tr>
+                    <th>NFT miniature</th>
+                    <th>Description</th>
+                    <th>Price (US$)</th>
+                    <th>available quantity</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td><img class="miniatures" src="img/Novas imagens/cake-boss.png" width="75px" alt="Miniature NFT: Cake Boss"/></td>
+                    <td> Cake Boss  </td>
+                    <td> 2.212,00 </td>
+                    <td> 1 </td>
+                </tr>
+
+                <tr>
+                    <td><img class="miniatures" src="img/Novas imagens/fire-in-the-role.png" width="75px" alt="Miniature NFT: Fire in the Role"/></td>
+                    <td> Fire in the Role </td>
+                    <td> 4.780,00 </td>
+                    <td> 1 </td>
+                </tr>
+
+                <tr>
+                    <td><img class="miniatures" src="img/Novas imagens/like-candy.png" width="75px" alt="Miniature NFT: Like Candy"/></td>
+                    <td> Like Candy </td>
+                    <td> 2.562,00 </td>
+                    <td> 1 </td>
+                </tr>
+
+                <tr>
+                    <td><img class="miniatures" src="img/Novas imagens/sailor.png" width="75px" alt="Miniature NFT: Sailor"/></td>
+                    <td> Sailor </td>
+                    <td> 1.890,00 </td>
+                    <td> 1 </td>
+                </tr>
+                
+                <tr>
+                    <td><img class="miniatures" src="img/Novas imagens/take-my-money.png" width="75px" alt="Miniature NFT: Take my Money "/></td>
+                    <td> Take my Money </td>
+                    <td> 5.100,00 </td>
+                    <td> 1 </td>
+                </tr>
+                <tr>
+                    <td><img class="miniatures" src="img/Novas imagens/take-my-trophy.png" width="75px" alt="Miniature NFT: Take my Trophy "/></td>
+                    <td> Take my Trophy </td>
+                    <td> 3.000,00 </td>
+                    <td> 1 </td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </body>    
+    <footer>
+
+        <p>Follow us on social networks</p>
+
+        <!--<div>
+            <img id="footer" src="img/Novas imagens/footer.jpg" />
+            
+        </div>-->
+    </footer>
 </body>
 </html>
