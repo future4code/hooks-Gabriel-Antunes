@@ -51,8 +51,10 @@ div img {
 }
 
 .container {
+    /* display: flex; */
     height: 500px;
     text-align: center;
+    /* flex-direction: column; */
 }
 
 .icone {
@@ -76,6 +78,9 @@ div img {
 }
 
 #container-para-comprar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: #e7eb90;
 }
 
