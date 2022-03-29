@@ -8,9 +8,9 @@
     margin: 0;
     padding: 0;
 }
-.tela-comprar{
-    font-family: 'Roboto', sans-serif;
-}
+
+   
+
 h2 {
     background-color: #fe7e02;
     padding: 10px 5px 10px 5px;
@@ -97,10 +97,24 @@ div>p:first-child {
 div:nth-child(2),
 div:last-child {
     text-align: center;
+    
 }
-
+.tela-comprar{
+    font-family: 'Roboto', sans-serif;
+}
+.tabela{
+   display: flex;
+   justify-content: center;
+    
+}
+.voltar{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
 table {
     width: 60%;
+    
 }
 
 tr td img{
