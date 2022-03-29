@@ -122,8 +122,15 @@ td button {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    
 }
-
+.container-do-search input{
+    
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: 2px;
+}
 
 #back-button {
     background-color: white;
