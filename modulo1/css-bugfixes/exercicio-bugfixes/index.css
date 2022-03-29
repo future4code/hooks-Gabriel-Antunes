@@ -106,6 +106,13 @@ div:last-child {
 table {
     width: 60%;
 }
+
+tr td img{
+    max-height: 50px;
+    height: auto;
+    width: auto;
+    
+}
 td {
     text-align: center;
 }
