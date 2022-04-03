@@ -7,13 +7,15 @@
     color: inherit;
    
 }
+/*Home + header + footer*/
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background:linear-gradient(200deg, rgb(59, 59, 59), rgb(36, 34, 34));
-    height: 100vh;
+    height: 100%;
+    
 }
 
 header{
@@ -256,22 +258,227 @@ footer{
     height: auto;
    
 }
-.sobre-mim{
-    
-    background-color: rgb(0, 0, 0,.2);
-    max-width: 70vw;
-    min-width: 70vw;
-    padding-top: 2vh;
+/*página contato*/
+.tabela{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    color: white;
     align-items: center;
+    background-color:rgb(0, 0, 0,.8)
+    
+    
+}
+.tabela h1{
+    align-self: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width:350px;
    
 }
-.sobre-mim video{
-    position:static;
-    background-size:contain;
-    right: 0;
-    bottom: 0;
+.enviar{
+    width: 150px;
+    align-self: center;
+}
+.itensInput{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    
+}
+
+input{
+   height: 20px;
+   color: black;
+}
+textarea{
     width: 100%;
+    resize: none;
+    color: black;
+    
+}
+.mainContato{
+    display: flex;
+    justify-content: center;
+    width: 70vw;
     height: 100%;
-    filter: brightness(15%);
-    z-index: -1;
+    background-image: url(img/contato.jpg);
+    background-position: center ;
+    
+   
+}
+.botaoEnviar{
+    color: black;
+    align-self: center;
+    margin-top: 5px;
+    
+}
+.botaoEnviar input{
+    font-size: 14px;
+    width: 70px;
+}
+.botaoEnviar input:hover{
+    color: rgb(255, 123, 0);
+    background-color: black;  
+    border-style: none;     
+}
+.botaoEnviar input:active{
+    background-color:rgb(255, 123, 0);
+    color: white;
+    border-radius: 5px;
+}
+/* Projetos*/
+
+.projetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 100%;
+    margin: 10px 0  ;
+
+}
+
+.projeto h1{
+    background-color: rgb(0,0,0,.8);
+    color: white;
+    width: 100%;
+        
+}
+.projeto{
+    display: flex;
+    width: 33.33%;
+    transition: 3s;
+    height: 300px;
+}
+.projeto:hover{
+    width: 100%;
+    height: 350px;
+    border-style: solid;
+    border-color:black ;
+    
+}
+.openspace{
+    background-image: url(img/open-space.png);
+    background-size:auto;
+    background-position:center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.blackjack{
+    background-image: url(img/black-jack.png);
+    background-size:auto;
+    background-position:top;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.samsung{
+    background-image: url(img/footer-samsung-clone.png);
+    background-size:auto;
+    background-position:center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Página projetos individuais*/
+.about{
+    width: 70vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,0,0.2);
+    
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about img{
+  
+    width: 100%;
+    height: auto;
+    transition: 2s;
+}
+
+.about h1,h2{
+    text-align: center;
+    margin: 5px;
+    color:white;
+}
+.about h1{
+   
+    font-size: 35px;
+    height: 20x;
+}
+.about p{
+    
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin: 10px;
+}
+.about button{
+    font-size: 20px;
+    font-style: bold;
+    padding: 10px;
+    background-color:rgb(255,123,0);
+    color: rgb(0, 0, 0);
+    border-style: none;
+    border-radius: 5px;
+}
+.about button:hover{
+    background-color: black;
+    color: rgb(255,123,0);
+}
+.about button:active{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* sobre mim */
+
+.sobre-mim{
+    width: 67vw;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    color: white;
+    background-color: rgb(0,0,0,0.2);
+}
+.sobre-mim img{
+    width: 20vw
+
+}
+.eu{
+    border-radius: 50%;    
+    z-index: 1;
+    position:absolute;
+  
+    
+}
+.borda{
+    filter: contrast(75);
+    z-index: 2;
+    
+}
+.historia{
+    align-self: center;
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 60%;
+    text-align: justify;
+}
+.sobre-mim h1{
+    margin-bottom: 10px;
+    
 }
