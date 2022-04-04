@@ -4,70 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Products</title>
+    <title>Open Space - NFT's for you</title>
     <link rel="Stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <video autoplay muted loop id="back">
+        <source src="img/Novas imagens/4K _ Nebula blue _ FREE FOOTAGE.mp4" type="video/mp4">
+      </video>
     <header>
-        <div id="open-space"> 
-            <h1>Open Space</h1>
-        
-        
-            <p><b>The new way to buy NFT.</b></p>
-            <p>Why go to sea when the space is much bigger?</p>
-
-        </div>
-
-        <div class="nav">
-            <a class="links" href="index.html">Home Page</a>
-            <a class="links" href="ctrl-estoque.html">Inventory Control</a>
-            <a class="links" href="add-produto.html">Add Products</a>
-            <a class="links" href="funcionarios.html">Employees</a>
-        </div>
-</header>
-
-<body>
-    
-    <h2>Adicionar Produto</h2>
-    <form action="">
-        <div>
-            <label for="link-foto">Link para foto: </label>
-            <input type="url" id="link-foto" name="link-foto">
-        </div>
-        
-        <div>
-            <label for="descricao">Descrição do produto: </label>
-            <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descricao" name="descrição">
-        </div>
-        
-        <div>
-            <label for="preco">Preço (em R$): </label>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="Number" id="preco" name="preço">
-        </div>
-        
-        <div>
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-            <label for="quantidade-produtos">Quantidade disponível: </label>
-            <input type="Number" id="quantidade-produtos" name="quantidade-produtos">
-        </div>
-
-        <div class="form-add">
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="submit">Adicionar</button>
-        </div>
-
-    </form>
-    </body>    
-    <footer>
-
-        <p>Follow us on social networks</p>
-
-        <!--<div>
-            <img id="footer" src="img/Novas imagens/footer.jpg" />
+        <nav>
+            <div id="open-space"><a href="index.html">OPEN SPACE</a></div>        
+           
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="ctrl-estoque.html">Inventory Control</a</li>
+                <li><a href="add-produto.html">Add Products</a></li>
+                <li><a href="funcionarios.html">Employees</a></li>
+            </ul>
             
-        </div>-->
-    </footer>
+        </nav>     
+    </header>
+    <main>
+        
+        <div class="add-nft">
+            <div class="Title">Add Product</div>
+            <form action="" class="labels">
+                <div class="input-box">
+                    <label for="link-picture">Picture link:</label>
+                    <input type="url" placeholder="Paste the link here" id="link-picture" name="link-picture" required>
+                </div>
+                
+                <div class="input-box">
+                    <label for="description">Product description </label>
+                    <input type="text" placeholder="Describe the NFT here" id="description" name="description" required>
+                </div>
+                
+                <div class="input-box">
+                    <label for="price">Price (US$): </label>
+                    <input type="Number" placeholder="Price of the NFT"id="price" name="price" required>
+                </div>
+                
+                <div class="input-box">
+                    <label for="Available-quantity">Available quantity: </label>
+                    <input type="Number" placeholder="Fill quantityid" id="Available-quantity" name="Available-quantity" required>
+                </div>
+
+                <div class="form-add">
+                    <button type="submit">Adicionar</button>
+                </div>
+
+            </form>
+
+        </div>
+    </main>    
+    <footer>
+        
+        <h2>Follow us on social networks</h2>
+    <ul>
+        <li><a href="#"><img class="social" src="img/facebook.png"  alt="Facebook icon"></a></li>
+        <li><a href="#"><img class="social" src="img/instagram.png" alt="Instagram icon"></a</li>
+        <li><a href="#"><img class="social" src="img/twitter.png" alt="Twitter icon"></a></li>
+    </ul>
+</footer>
 </body>
 </html>
