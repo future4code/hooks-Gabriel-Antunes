@@ -79,7 +79,7 @@ class App extends React.Component {
         },
         {
           nome:'Flavia',
-          perfil:'https://picsum.photos/id/222/50/50',
+          perfil:'surge',
           foto:'https://picsum.photos/id/215/200/150',
         }
       
