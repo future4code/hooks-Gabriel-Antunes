@@ -4,7 +4,7 @@ import FreeInput from "../FreeInput";
 import InputName from "../InputName";
 import LockInput from "../LockInput";
 import Final from "../Final";
-import Button from "../../Button";
+import Button from "../Button";
 
 class Form extends React.Component {
   state = {
@@ -28,12 +28,13 @@ class Form extends React.Component {
     otherCourses: "Answer here",
 
     showOptions: false,
-
+    college:Boolean,
     page:"home",
   
   };
 
   saveName=""
+  
 
   onChangeName=(e)=>{this.setState({name:e.target.value})};
   onChangeCourse=(e)=>{this.setState({course:e.target.value})};
@@ -46,18 +47,22 @@ class Form extends React.Component {
   onClickOption1 = () => {
     this.setState({ selector: this.state.highSchoolFinished.value });
     this.setState({ showOptions: !this.state.showOptions });
+    this.setState({college:false});
   };
   onClickOption2 = () => {
     this.setState({ selector: this.state.highSchoolUnfinished.value });
     this.setState({ showOptions: !this.state.showOptions });
+    this.setState({college:false});
   };
   onClickOption3 = () => {
     this.setState({ selector: this.state.collegeEducationFinished.value });
     this.setState({ showOptions: !this.state.showOptions });
+    this.setState({college:true});
   };
   onClickOption4 = () => {
     this.setState({ selector: this.state.collegeEducationUnfinished.value });
     this.setState({ showOptions: !this.state.showOptions });
+    this.setState({college:true});
   };
 onClickCourse1 = () =>{
     this.setState({otherCourses:this.state.optionCourse1});
@@ -82,10 +87,12 @@ goToFinal = (event)=>{
 }
 goNextPage = (event)=>{
   event.preventDefault();
-  this.saveName = this.state.name
-  if(this.state.collegeEducationFinished.result || this.state.collegeEducationUnfinished.result){
-    this.setState({page:'with college'})
-  }else{
+  this.saveName = this.state.name;
+  console.log(this.state.college);
+  if(this.state.college === true){
+    this.setState({page:'with college'});
+    console.log(this.state.college);
+  }if(this.state.college === false){
     this.setState({page:'without college'})
   }
   this.setState({name:""});
