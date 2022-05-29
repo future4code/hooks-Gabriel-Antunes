@@ -7,7 +7,6 @@ export const Container = styled.div`
     flex-direction:column;
     align-items:center;
 
-
 `;
 
 export const Header = styled.div`
@@ -81,6 +80,10 @@ export const Page = styled.div`
     padding:20px;
     border-radius:5px;
 
+    @media screen and (max-width: 720px){
+       width:100vw;
+       padding:0;
+  }
 `;
 
 
@@ -95,12 +98,18 @@ export const SideBar = styled.div`
     background-color:rgba(128,128,128,.1);
     border-radius:5px;
     border:1px ridge black;
+    @media screen and (max-width: 720px){
+       width:35%;
+  }
 `;
 
 export const MainApp = styled.div`
     width:68%;
     border-radius:5px;
     border:1px ridge black;
+    @media screen and (max-width: 720px){
+       width:63%;
+  }
    
 `;
 
@@ -138,6 +147,7 @@ export const NewPlaylist = styled.div`
         white-space:nowrap;
         max-width:95%;
         overflow-x:hidden;
+        overflow-y:hidden;
         text-overflow:ellipsis;
     }
     input{
@@ -164,6 +174,20 @@ export const NewPlaylist = styled.div`
             background-color:green;
             color:white;
         }
+    }
+`;
+
+export const MusicsList = styled.div`
+    width:100%;
+    height:90%;
+    display:flex;
+    flex-direction:column;
+    overflow-y:scroll;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    &::-webkit-scrollbar{
+        width:0;
+        height:0;
     }
 `;
 

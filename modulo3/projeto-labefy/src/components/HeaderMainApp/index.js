@@ -7,13 +7,28 @@ class HeaderMainApp extends React.Component{
     render(){
         return(
             <Container>
-                <h2>João</h2>
-                <span>Contador de musicas</span>
+                <h2>{this.props.name}</h2>
+                <span>{this.props.quantity}</span>
                 <div>
-                    <MdOutlinePlaylistAdd/>
-                    <p>Add music to plalyst</p>
-                   
-                </div>
+                    <p>New music to plalyst</p> 
+                    <input 
+                    placeholder={'Music Name'} 
+                    value={this.props.musicname} 
+                    onChange={this.props.changemusicname}/>
+                    <input 
+                    placeholder={'Artist'} 
+                    value={this.props.artist} 
+                    onChange={this.props.changeartist}/>
+                    <input 
+                    placeholder={'URL'} 
+                    value={this.props.urlmusic} 
+                    onChange={this.props.changeurlmusic}/>
+                    <button onClick={this.props.clickaddmusic}>
+                        <span>Add</span>
+                        <MdOutlinePlaylistAdd/>
+                    </button>
+                    </div>
+                
             </Container>
         )
     }
