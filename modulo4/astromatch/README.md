@@ -50,7 +50,7 @@ Estamos fornecendo uma API específica para esse projeto, cuja documentação se
 
 ## 🔗 Link Surge:
 
-http://astromatch-antunes-hooks.surge.sh/
+encurtador.com.br/euy25
 
 ## ✒️ Autores
 

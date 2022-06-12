@@ -15,8 +15,8 @@ const Main=()=>{
   const [currentPage,setCurrentPage] = useState("");
   const [matches,setMatches] = useState([]);
 
-  useEffect(()=> getProfileToChoose,[]);
-  useEffect(()=> getMatches,[matches]);
+  useEffect(()=>  {getProfileToChoose()},[]);
+  useEffect(()=> getMatches,[matches,currentPage]);
 
   const getProfileToChoose = async()=>{
     try{
