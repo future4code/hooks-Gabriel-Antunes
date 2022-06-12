@@ -50,7 +50,7 @@ Estamos fornecendo uma API específica para esse projeto, cuja documentação se
 
 ## 🔗 Link Surge:
 
-encurtador.com.br/euy25
+https://astromatch-gabriel-antunes.surge.sh/
 
 ## ✒️ Autores
 
