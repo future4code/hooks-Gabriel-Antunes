@@ -21,7 +21,7 @@ export const Container = styled.div`
 `;
 
 export const CandidateButtons  =styled.div`
-    margin-top:20px;
+    margin-top:15px;
     display:flex;
     align-items:center;
     gap:40%;

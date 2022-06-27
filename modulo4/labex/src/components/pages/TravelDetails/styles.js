@@ -8,7 +8,7 @@ export const Container = styled.div`
     flex-direction:column;
     align-items:center;
     gap:20px;
-    padding:40px 20px;
+    padding:20px 20px;
     background-color:rgba(255,255,255,0.6  );
     backdrop-filter:blur(20%);
     border-radius:10px;

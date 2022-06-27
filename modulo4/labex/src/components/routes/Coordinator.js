@@ -21,3 +21,6 @@ export const goHome = (navigate)=>{
 export const goReserve = (navigate)=>{
     navigate("/reserve")
 }
+export const goTravelDetails = (navigate,id)=>{
+    navigate(`/admin/travel-details/${id}`)
+}

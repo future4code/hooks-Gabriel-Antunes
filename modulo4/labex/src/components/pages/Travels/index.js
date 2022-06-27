@@ -1,15 +1,16 @@
-import React,{useEffect} from "react";
+import React from "react";
 import HeaderTravels from "../../_molecules/HeaderTravels";
 import TravelCard from "../../_molecules/TravelCard";
 import {Container} from './styles';
 import {goReserve,goHome} from '../../routes/Coordinator';
 import { useNavigate } from "react-router-dom";
 import useRequestData from "../../hooks/useRequestData";
-import {urlGetTravels} from "../../constants/urlsAPI"
+import {urlGetTravels} from "../../constants/urlsAPI";
+import { SpinnerInfinity } from 'spinners-react';
 
 const Travels=()=>{
   const navigate = useNavigate();
-  const [data,isLoading,error] = useRequestData(urlGetTravels);
+  const [data,isLoading] = useRequestData(urlGetTravels);
     
   const onClickBack = ()=>{
     goHome(navigate)
@@ -36,6 +37,7 @@ const Travels=()=>{
       onClickBack={onClickBack}
       onClickReserve={onClickReserve}
     />
+    {isLoading && <SpinnerInfinity size={50} thickness={100} speed={100} color="#36ad47" secondaryColor="rgba(0, 0, 0, 0.44)" />}
     {renderTravels}
    </Container>
   );

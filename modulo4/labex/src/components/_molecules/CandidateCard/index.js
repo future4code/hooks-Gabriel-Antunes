@@ -7,9 +7,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const CandidateCard=(props)=>{
   
-const onClickDismiss = ()=>{console.log('Dismiss')}
-const onClickApprove = ()=>{console.log('Approve')}
-
   return (
    <Container>
     <RowTable title="Name:" text={props.name}/>
@@ -19,14 +16,14 @@ const onClickApprove = ()=>{console.log('Approve')}
     <RowTable title="Country:" text={props.country}/>
     <CandidateButtons>
     <ButtonStandard
-        onCLick={onClickDismiss}
+        onClick={props.onClickDismiss}
         variant="contained"
         color="error"
         children="Dismiss"
         startIcon={<HighlightOffIcon/>}
         />
         <ButtonStandard
-        onCLick={onClickApprove}
+        onClick={props.onClickApprove}
         variant="contained"
         color="success"
         children="Approve"

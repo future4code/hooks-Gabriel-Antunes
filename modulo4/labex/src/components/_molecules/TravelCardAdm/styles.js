@@ -13,7 +13,7 @@ export const Container = styled.div`
     h3{
         color:rgb(255,255,255);
         font-size:20px;
-        max-width:90%;
+        width:90%;
         overflow:hidden;
         text-overflow:ellipsis;
         display:-webkit-box;

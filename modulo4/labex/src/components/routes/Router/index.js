@@ -23,7 +23,7 @@ const Router=()=>{
             <Route path="/admin/new-travel" element ={<NewTravel/>}/>
             <Route path="/travels" element ={<Travels/>}/>
             <Route path="/admin/travels" element ={<TravelsAdm/>}/>
-            <Route path="/admin/travel-details" element ={<TravelDetails/>}/>
+            <Route path="/admin/travel-details/:id" element ={<TravelDetails/>}/>
             <Route path="/reserve" element ={<ApplyTravelPage/>}/>
             <Route path="*" element={<ErrorPage/>} />
         </Routes>

@@ -1,19 +1,12 @@
 import React from "react";
 import {Container} from './styles';
-import background from '../../assets/videos/404-video.mp4';
-import rocket from '../../assets/img/rocket.png';
+import backgroundImg from '../../assets/img/404-background.png'
 
 const ErrorPage=()=>{
  
   return (
    <Container>
-       <video 
-       src={background} 
-       type="video/mp4" 
-       muted 
-       autoPlay 
-       loop></video>
-       <img src={rocket} alt="rocket" />
+       <img src={backgroundImg} alt="Error"/>
    </Container>
   );
 }

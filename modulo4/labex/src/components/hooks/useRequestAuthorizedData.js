@@ -10,7 +10,7 @@ const useRequestAuthorizedData = (url) => {
     useEffect(()=>{
         setIsLoading(true)
         axios
-        .get(url,header)
+        .get(url,header(localStorage.getItem('token')))
         .then((res)=>{
             setIsLoading(false)
             setData(res.data)

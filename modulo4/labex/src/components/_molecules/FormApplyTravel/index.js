@@ -1,27 +1,12 @@
 import React from "react";
 import {Container} from './styles';
 import { Select, FormControl, FilledInput, MenuItem, InputLabel} from "@mui/material";
-import {countries} from '../../constants/countries';
-import useForm from "../../hooks/useForm";
 import ButtonPrimary from "../../_atoms/ButtonPrimary";
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import useRequestData from "../../hooks/useRequestData";
-import { urlGetTravels } from "../../constants/urlsAPI";
 
+ 
 
 const FormApplyTravel=(props)=>{
-    const [data,onLoading,error] = useRequestData(urlGetTravels)
-
-    const countriesRender = countries.map((item)=><MenuItem key={item.label} value={item.label}>{item.label}</MenuItem>)
-    const initialValue = {
-        travel:"",
-        name:"", 
-        age:"",
-        message:"",
-        profession:"",
-        country:"",
-    }
-    const {form,onChange} = useForm(initialValue)
 
     return (
     <Container>
@@ -29,11 +14,10 @@ const FormApplyTravel=(props)=>{
             <InputLabel>Travel</InputLabel>
             <Select required
             name="travel"  
-            value={form.travel}
-            onChange={onChange}
+            value={props.form.travel}
+            onChange={props.onChange}
             >
-            <MenuItem key={1} value={1}>{"teste"}</MenuItem>
-            <MenuItem key={2} value={2}>{"teste 2 "}</MenuItem>
+            {props.listTravels}
             </Select>
         </FormControl>
 
@@ -41,8 +25,8 @@ const FormApplyTravel=(props)=>{
             <InputLabel>Name</InputLabel>
             <FilledInput required
             name="name" 
-            value={form.name}
-            onChange={onChange}
+            value={props.form.name}
+            onChange={props.onChange}
             />
         </FormControl>  
 
@@ -50,8 +34,8 @@ const FormApplyTravel=(props)=>{
             <InputLabel>Age</InputLabel>
             <FilledInput required
             name="age"
-            value={form.age}
-            onChange={onChange}
+            value={props.form.age}
+            onChange={props.onChange}
             />
         </FormControl> 
 
@@ -59,8 +43,8 @@ const FormApplyTravel=(props)=>{
             <InputLabel>Message</InputLabel>
             <FilledInput required
             name="message"
-            value={form.message}
-            onChange={onChange}
+            value={props.form.message}
+            onChange={props.onChange}
             />
         </FormControl> 
 
@@ -68,8 +52,8 @@ const FormApplyTravel=(props)=>{
             <InputLabel>Profession</InputLabel>
             <FilledInput required
             name="profession"
-            value={form.profession}
-            onChange={onChange}
+            value={props.form.profession}
+            onChange={props.onChange}
             />
         </FormControl>  
         
@@ -78,9 +62,9 @@ const FormApplyTravel=(props)=>{
             <Select required
             label="Country"
             name="country"
-            value={form.country}
-            onChange={onChange}
-            >{countriesRender}
+            value={props.form.country}
+            onChange={props.onChange}
+            >{props.listCountries}
             </Select>
         </FormControl>
         <FormControl fullWidth >

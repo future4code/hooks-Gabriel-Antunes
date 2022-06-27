@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LoginArea from "../../_molecules/LoginArea";
 import {Container} from './styles';
 import { goAdmTravels, goHome } from "../../routes/Coordinator";
@@ -9,6 +9,12 @@ import useForm from "../../hooks/useForm"
 
 const Login=()=>{
   const navigate = useNavigate()
+  useEffect(()=>{
+    const token = localStorage.getItem('token')
+    if(token){
+      goAdmTravels(navigate)
+    }
+  },[])
 
   const {form,onChange,cleanInputs} = useForm({email:"",password:""})
   const [placeEmail,setplaceEmail] = useState("E-mail")
