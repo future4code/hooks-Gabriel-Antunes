@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "typescript": "^4.7.4"
+  },
+  "scripts":{
+    "start": "clear && tsc",
+    "exercicio01": "clear && tsc && node ./build/exercicio01.js",
+    "exercicio02": "clear && tsc && node ./build/exercicio02.js",
+    "exercicio03": "clear && tsc && node ./build/exercicio03.js",
+    "exercicio04": "clear && tsc && node ./build/exercicio04.js",
+    "exercicio05": "clear && tsc && node ./build/exercicio05.js",
+    "exercicio06": "clear && tsc && node ./build/exercicio06.js"
+  }
+}
