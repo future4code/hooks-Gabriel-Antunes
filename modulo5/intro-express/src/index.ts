@@ -1,3 +1,4 @@
+
 import  express  from "express";
 import cors from "cors";
 import { match } from "assert";
@@ -201,4 +202,5 @@ app.delete('/:userId/posts/:postId',(req,res)=>{
 
 app.listen(3003,()=>{
     console.log('the server is running in http://localhost/3003')
+
 })

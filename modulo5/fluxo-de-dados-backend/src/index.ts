@@ -9,7 +9,8 @@ app.use(cors())
 
 let dinamicData:product[] = data
 
-app.get('/',(req, res)=>{
+
+app.get('/test',(req, res)=>{
     res.send('API is OK!')
 })
 
@@ -27,6 +28,7 @@ app.post('/add-product',(req:Request,res:Response) => {
             statusCode=412
             throw new Error("O valor do produto deve ser maior que zero.") 
         }
+
         const newProduct:product= {
             id:idGen(),
             name:productName.toLocaleLowerCase(),
@@ -55,6 +57,7 @@ app.put('/product-edit',(req:Request,res:Response)=>{
     const productId:string | undefined = (req.query.id as string)
     const matchId = dinamicData.find((product)=> product.id === productId)
     const newPrice:number | undefined = Number(req.query.price)
+
     try{
         if(!productId){
             statusCode=400
@@ -113,6 +116,7 @@ app.delete('/product-delete',(req:Request,res:Response)=>{
 
     }catch(error:any){
         res.status(statusCode).send(error.message)
+
     }
 })
 
