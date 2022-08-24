@@ -83,7 +83,7 @@ app.put('/product-edit',(req:Request,res:Response)=>{
        
         
     }catch(error:any){
-
+        res.send(error.message)
     }
 })
 
