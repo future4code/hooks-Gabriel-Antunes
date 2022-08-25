@@ -1,0 +1,30 @@
+###
+GET http://localhost:3003/users
+
+### 
+GET http://localhost:3003/users/admin
+
+###
+GET http://localhost:3003/users/search?name=Alice
+
+###
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "id":15,
+    "name":"ZEZINHO",
+    "email":"gabriel@teste.com.br",
+    "type":"admin",
+    "age":22
+}
+
+###
+
+
+PUT http://localhost:3003/users/2
+Content-Type: application/json
+
+{
+    "name":"novo nome"
+}
