@@ -9,20 +9,24 @@ app.use(cors())
 
 let dinamicData:product[] = data
 
+
 app.get('/test',(req, res)=>{
     res.send('API is OK!')
 })
 
 app.post('/add-product',(req:Request,res:Response) => {
-    let statusCode = 500
-    const productName = (req.body.name as string)
-    const productPrice = (req.body.price as number)
+    let statusCode:number = 500
+    const productName:string | undefined = (req.body.name as string)
+    const productPrice:number| undefined = (req.body.price as number)
 
     try{
         if(!productName || !productPrice){
             statusCode=422
-            console.log(productName,productPrice,req.body)
             throw new Error("É necessário informar o nome e preço do produto!") 
+        }
+        if(productPrice <= 0){
+            statusCode=412
+            throw new Error("O valor do produto deve ser maior que zero.") 
         }
 
         const newProduct:product= {
@@ -49,10 +53,11 @@ app.get('/get-products',(req:Request,res:Response)=>{
 })
 
 app.put('/product-edit',(req:Request,res:Response)=>{
-    let statusCode = 500
-    const productId = req.params.id
+    let statusCode:number = 500
+    const productId:string | undefined = (req.query.id as string)
     const matchId = dinamicData.find((product)=> product.id === productId)
-    const newPrice = (req.body.price as number)
+    const newPrice:number | undefined = Number(req.query.price)
+
     try{
         if(!productId){
             statusCode=400
@@ -66,24 +71,52 @@ app.put('/product-edit',(req:Request,res:Response)=>{
             statusCode=400
             throw new Error("É necessário fornecer o novo preço do produto.")
         }
-        const newData:product[] = dinamicData.filter((product)=>{
-            return product.id !== productId
-        })
-        const attProduct:product[] = dinamicData.filter((product)=>{
+        if(newPrice <= 0){
+            statusCode=412
+            throw new Error("O valor do produto deve ser maior que zero.") 
+        }
+        
+
+        const newList:product[] = dinamicData.map((product)=>{
             if(product.id === productId){
                 product.price = newPrice
-                return
-            } 
+                return product
+            }else{
+                return product
+            }
         })
 
-        dinamicData = [...newData,...attProduct]
+        dinamicData = newList
+
+        res.status(200).send(dinamicData)
+        
+    }catch(error:any){
+        res.status(statusCode).send(error.message)
+    }
+})
+
+app.delete('/product-delete',(req:Request,res:Response)=>{
+    let statusCode:number = 500
+    const productId:string | undefined = (req.query.id as string)
+    const matchId = dinamicData.find((product)=>product.id === productId)
+    try{
+        if(!productId){
+            statusCode=400
+            throw new Error("É necessário fornecer o ID do produto.")
+        }
+        if(!matchId){
+            statusCode=404
+            throw new Error("ID informado não encontrado na lista de produtos.")
+        }
+       
+        const newList:product[] = dinamicData.filter((product)=>product.id !== productId)
+        dinamicData = newList
 
         res.status(200).send(dinamicData)
 
-       
-        
     }catch(error:any){
-        res.send(error.message)
+        res.status(statusCode).send(error.message)
+
     }
 })
 
