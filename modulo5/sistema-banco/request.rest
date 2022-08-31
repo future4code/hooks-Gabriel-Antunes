@@ -1,0 +1,24 @@
+###
+GET http://localhost:3003/users
+
+###
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "name":"João",
+    "cpf":"45145673378",
+    "birthDate":"12-04-2001"
+}
+
+###
+GET http://localhost:3003/users/91202256015/balance
+
+###
+PUT http://localhost:3003/users/91202256015/deposit
+Content-Type: application/json
+
+{
+    "name":"nome 04",
+    "depositValue":500
+}
