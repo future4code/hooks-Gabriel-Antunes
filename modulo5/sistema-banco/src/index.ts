@@ -172,7 +172,6 @@ app.post('/users/:id/bills',(req:Request,res:Response)=>{
             statusCode = 422
             throw new Error('É obrigatório informar o valor e a descrição da conta.')
         }
-        if()
         if(!date){
             date = new Date(Date.now()).toLocaleDateString()
         }
