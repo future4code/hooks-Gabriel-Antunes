@@ -1,0 +1,38 @@
+###
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "name": "cedro",
+    "email": "dev.gabriel.antunes@gmail.com",
+    "password":"sidjasodisajdoasij"
+}
+
+###
+GET http://localhost:3003/users 
+
+###
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+    "name":"celular",
+    "price":4999,
+    "image_url":"https://files.tecnoblog.net/wp-content/uploads/2020/12/iPhone-12-Pro_Capa_TB.png"
+}
+
+###
+GET http://localhost:3003/products?order=asc&search=SOP
+
+###
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+{
+    "quantity":6,
+    "user_id":"0a4147ad-30dd-4547-9e35-94e655d02f13",
+    "product_id":"1"
+}
+
+###
+GET  http://localhost:3003/users/0a4147ad-30dd-4547-9e35-94e655d02f13/purchases
