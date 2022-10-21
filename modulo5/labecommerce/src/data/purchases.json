@@ -1,0 +1,16 @@
+[
+    {
+        "id":"dsapdkaspdkasdasodkjasda",
+        "user_id":"0a4147ad-30dd-4547-9e35-94e655d02f13",
+        "product_id":1,
+        "quantity": 3,
+        "total_price": 300
+    },
+    {
+        "id":"dsapddasdkaspdkadsadasdsasdasodkjasda",
+        "user_id":"0a4147ad-30dd-4547-9e35-94e655d02f13",
+        "product_id":2,
+        "quantity": 3,
+        "total_price": 375
+    }
+]

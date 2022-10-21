@@ -1,0 +1,35 @@
+{
+  "name": "labecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./build/index.js",
+    "build": "tsc",
+    "migrations": "tsnd ./src/data/migrations.ts",
+    "dev": "tsnd --transpile-only --ignore-watch node_modules ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/knex": "^0.16.1",
+    "@types/node": "^18.7.21",
+    "@types/uuid": "^8.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "knex": "^2.3.0",
+    "mysql": "^2.18.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.6",
+    "nodemailer": "^6.7.8"
+  }
+}

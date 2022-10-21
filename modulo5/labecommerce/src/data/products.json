@@ -1,0 +1,14 @@
+[
+	{
+		"id" : "1",
+		"name" : "SOPA CARNE",
+		"price" : 100,
+		"image_url" : "https://static.clubedaanamariabraga.com.br/wp-content/uploads/2021/08/sopa-de-carne-macarrao-e-legumes.jpg?x41527"
+	},
+	{
+		"id" : "2",
+		"name" : "SOPA CREMOSA DE COUVE-FLOR",
+		"price" : 125,
+		"image_url" : "https://assets.unileversolutions.com/recipes-v2/36850.jpg"
+	}
+]
